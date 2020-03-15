@@ -6,67 +6,8 @@
 	<link rel="stylesheet" href="../../../front_end_script/jquery-ui-1.12.1/jquery-ui.min.css"/>
 	<script src="../../../front_end_script/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
 	<script src="../../../front_end_script/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-	<script>
-	
-	$(function(){
-	
-		
-		$(".accordion").accordion({
-			active: 0,
-			heightStyle: 'content',
-			collapsible: true
-		});
-		
-		// 创建目录
-		$("#content").children().each(function(index, element){
-		
-			var tagName=$(this).get(0).tagName;
-		
-			if(tagName.substr(0,1).toUpperCase()=="H"){
-				
-				var contentH=$(this).html();//获取内容
-				var markid=contentH.substr(0, contentH.search(' '));
-				$(this).attr("id",markid);//为当前h标签设置id
-				$("#menu").append("<a href='#"+markid+"'>"+contentH+"</a><br/>");//在目标DIV中添加内容
-			}
-		});	
-		
-		$('#goto-top a').click(function(){
-		
-			console.log('11')
-			$('body,html').animate({scrollTop:0}, 500);
-			return false;
-		});			
-	});
-	</script>
-	<style>
-	body{
-		font-family: "Trebuchet MS", sans-serif;
-		margin: 10px;
-	}
-	img{max-width: 100%;}
-	#goto-menu a{
-		//width:50px;
-		height: 50px;
-		position: fixed;
-		right: 10px;
-		top: 45%;
-		color: gray;
-	}	
-	#goto-top a{
-		//width:50px;
-		height: 50px;
-		position: fixed;
-		right: 10px;
-		bottom: 5px;
-		color: gray;
-	}
-	.str_p {color: gray;} 
-	.pla_p {color: yellow;}
-	.exe_p {color: green;}
-	.mon_p {color: blue;}
-	.end_p {color: red;}	
-	</style>
+	<script src="../../../front_end_script/comm_pmbok.js"></script>
+	<link rel="stylesheet" href="../../../front_end_script/comm_pmbok.css"/>
 </head>
 
 <body>
