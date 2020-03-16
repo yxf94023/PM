@@ -143,7 +143,8 @@ ES 是 EVM 理论和实践的延伸。挣得进度理论用 ES 和实际时间 (
 	<ul>
 		<li>定义 WBS 中用于绩效测量的控制账户；</li>
 		<li>确定拟用的 EVM 技术（如加权里程碑法、固定公式法、完成百分比法等）；</li>
-		<li>规定跟踪方法，以及用于计算项目完工估算（EAC）的 EVM 公式，该公式计算出的结果可用	于验证通过自下而上方法得出的完工估算。</li>
+		<li>规定跟踪方法，以及用于计算项目完工估算（EAC, Estimate at
+completion）的 EVM 公式，该公式计算出的结果可用	于验证通过自下而上方法得出的完工估算。</li>
 	</ul></li>
 	<li><b>报告格式</b>。需要规定各种成本报告的格式和编制频率。</li>
 	<li><b>其他细节</b>。关于成本管理活动的其他细节包括（但不限于）：
@@ -460,14 +461,14 @@ ES 是 EVM 理论和实践的延伸。挣得进度理论用 ES 和实际时间 (
 <h4>7.4.2.2 数据分析</h4>
 适用于控制成本过程的数据分析技术包括（但不限于）：
 <div class="accordion">
-	<h5>挣值分析 (EVA)</h5>
+	<h5>挣值分析 (EVA,Earned value analysis)</h5>
 	<div>
 	<p>
 	挣值分析将实际进度和成本绩效与绩效测量基准进行比较。EVM把范围基准、成本基准和进度基准整合起来，形成绩效测量基准。它针对每个工作包和控制账户，计算并监测以下三个关键指标：
 	<ul>
-	<li><b>计划价值</b>。计划价值（PV）是为计划工作分配的经批准的预算，它是为完成某活动或工作分解结构 (WBS) 组成部分而准备的一份经批准的预算，不包括管理储备。应该把该预算分配至项目生命周期的各个阶段；在某个给定的时间点，计划价值代表着应该已经完成的工作。PV的总和有时被称为绩效测量基准（PMB），项目的总计划价值又被称为完工预算（BAC）。</li>
-	<li><b>挣值</b>。挣值（EV）是对已完成工作的测量值，用该工作的批准预算来表示，是已完成工作的经批准的预算。EV 的计算应该与 PMB 相对应，且所得的 EV 值不得大于相应组件的 PV 总预算。EV 常用于计算项目的完成百分比，应该为每个 WBS 组件规定进展测量准则，用于考核正在实施的工作。项目经理既要监测 EV 的增量，以判断当前的状态，又要监测 EV 的累计值，以判断长期的绩效趋势。</li>
-	<li><b>实际成本</b>。实际成本（AC）是在给定时段内，执行某活动而实际发生的成本，是为完成与 EV 相对应的工作而发生的总成本。AC 的计算方法必须与 PV 和 EV 的计算方法保持一致（例如，都只计算直接小时数，都只计算直接成本，或都计算包含间接成本在内的全部成本）。AC 没有上限，为实现 EV 所花费的任何成本都要计算进去。</li>
+	<li><b>计划价值</b>。计划价值（PV, Planned value）是为计划工作分配的经批准的预算，它是为完成某活动或工作分解结构 (WBS) 组成部分而准备的一份经批准的预算，不包括管理储备。应该把该预算分配至项目生命周期的各个阶段；在某个给定的时间点，计划价值代表着应该已经完成的工作。PV(Planned value)的总和有时被称为绩效测量基准（PMB, Performance measurement baseline），项目的总计划价值又被称为完工预算（BAC, Budget at completion）。</li>
+	<li><b>挣值</b>。挣值（EV, Earned value）是对已完成工作的测量值，用该工作的批准预算来表示，是已完成工作的经批准的预算。EV(Earned value) 的计算应该与 PMB(Performance measurement baseline) 相对应，且所得的 EV(Earned value) 值不得大于相应组件的 PV(Planned value) 总预算。EV(Earned value) 常用于计算项目的完成百分比，应该为每个 WBS 组件规定进展测量准则，用于考核正在实施的工作。项目经理既要监测 EV(Earned value) 的增量，以判断当前的状态，又要监测 EV(Earned value) 的累计值，以判断长期的绩效趋势。</li>
+	<li><b>实际成本</b>。实际成本（AC, Actual cost）是在给定时段内，执行某活动而实际发生的成本，是为完成与 EV(Earned value) 相对应的工作而发生的总成本。AC(Actual cost) 的计算方法必须与 PV(Planned value) 和 EV(Earned value) 的计算方法保持一致（例如，都只计算直接小时数，都只计算直接成本，或都计算包含间接成本在内的全部成本）。AC(Actual cost) 没有上限，为实现 EV(Earned value) 所花费的任何成本都要计算进去。</li>
 	</ul>
 	</div>
 	
@@ -476,30 +477,42 @@ ES 是 EVM 理论和实践的延伸。挣得进度理论用 ES 和实际时间 (
 	<p>
 	见 <a href="../第四章 项目整合管理/4.html#4.5.2.2">4.5.2.2 节</a>。在 EVM 中，偏差分析用以解释成本偏差（CV = EV – AC）、进度偏差（SV = EV – PV）和完工偏差（VAC = BAC – EAC）的原因、影响和纠正措施。成本和进度偏差是最需要分析的两种偏差。对于不使用正规挣值分析的项目，可开展类似的偏差分析，通过比较计划成本和实际成本，来识别成本基准与实际项目绩效之间的差异；然后可以实施进一步的分析，以判定偏离进度基准的原因和程度，并决定是否需要采取纠正或预防措施。可通过成本绩效测量来评价偏离原始成本基准的程度。项目成本控制的重要工作包括：判定偏离成本基准（见 <a href="../第七章 项目成本管理/7.html#7.3.3.1">7.3.3.1 节</a>）的原因和程度，并决定是否需要采取纠正或预防措施。随着项目工作的逐步完成，偏差的可接受范围（常用百分比表示）将逐步缩小。偏差分析包括（但不限于）：
 	<ul>
-	<li><b>进度偏差</b>。进度偏差（SV）是测量进度绩效的一种指标，表示为挣值与计划价值之差。它是指在某个给定的时点，项目提前或落后的进度，它是测量项目进度绩效的一种指标，等于挣值（EV）减去计划价值（PV）。EVA 进度偏差是一种有用的指标，可表明项目进度是落后还是提前于进度基准。当项目完工时，全部的计划价值都将实现（即成为挣值），所以 EVA 进度偏差最终将等于零。最好把进度偏差与关键路径法 (CPM) 和风险管理一起使用。公式：SV = EV – PV。</li>
-	<li><b>成本偏差</b>。成本偏差（CV）是在某个给定时点的预算亏空或盈余量，表示为挣值与实际成本之差。它是测量项目成本绩效的一种指标，等于挣值（EV）减去实际成本（AC）。项目结束时的成本偏差，就是完工预算（BAC）与实际成本之间的差值。由于成本偏差指明了实际绩效与成本支出之间的关系，所以非常重要。负的 CV 一般都是不可挽回的。公式：CV = EV – AC。</li>
-	<li><b>进度绩效指数</b>。进度绩效指数（SPI）是测量进度效率的一种指标，表示为挣值与计划价值之比，反映了项目团队完成工作的效率。有时与成本绩效指数（CPI）一起使用，以预测项目的最终完工估算。当 SPI 小于 1.0 时，说明已完成的工作量未达到计划要求；当 SPI 大于 1.0 时，则说明已完成的工作量超过计划。由于 SPI 测量的是项目的总工作量，所以还需要对关键路径上的绩效进行单独分析，以确认项目是否将比计划完成日期提前或推迟完工。SPI 等于 EV 与 PV 的比值。公式：SPI = EV/PV。 </li>
-	<li><b>成本绩效指数</b>。成本绩效指数（CPI）是测量预算资源的成本效率的一种指标，表示为挣值与实际成本之比。它是最关键的 EVA 指标，用来测量已完成工作的成本效率。当 CPI 小于 1.0 时，说明已完成工作的成本超支；当 CPI 大于 1.0 时，则说明到目前为止成本有结余。CPI 等于 EV 与 AC 的比值。公式：CPI = EV/AC。</li>
+	<li><b>进度偏差</b>。进度偏差（SV, Schedule variance）是测量进度绩效的一种指标，表示为挣值与计划价值之差。它是指在某个给定的时点，项目提前或落后的进度，它是测量项目进度绩效的一种指标，等于挣值（EV, Earned value）减去计划价值（PV, Planned value）。EVA(Earned value analysis) 进度偏差是一种有用的指标，可表明项目进度是落后还是提前于进度基准。当项目完工时，全部的计划价值都将实现（即成为挣值），所以 EVA(Earned value analysis) 进度偏差最终将等于零。最好把进度偏差与关键路径法 (CPM) 和风险管理一起使用。公式：SV = EV – PV。</li>
+	<li><b>成本偏差</b>。成本偏差（CV, Cost variance）是在某个给定时点的预算亏空或盈余量，表示为挣值与实际成本之差。它是测量项目成本绩效的一种指标，等于挣值（EV, Earned value）减去实际成本（AC, Actual cost）。项目结束时的成本偏差，就是完工预算（BAC, Budget at completion）与实际成本之间的差值。由于成本偏差指明了实际绩效与成本支出之间的关系，所以非常重要。负的 CV(Cost variance) 一般都是不可挽回的。公式：CV = EV – AC。</li>
+	<li><b>进度绩效指数</b>。进度绩效指数（SPI, Schedule performance index）是测量进度效率的一种指标，表示为挣值与计划价值之比，反映了项目团队完成工作的效率。有时与成本绩效指数（CPI, Cost performance index）一起使用，以预测项目的最终完工估算。当 SPI(Schedule performance index) 小于 1.0 时，说明已完成的工作量未达到计划要求；当 SPI(Schedule performance index) 大于 1.0 时，则说明已完成的工作量超过计划。由于 SPI(Schedule performance index) 测量的是项目的总工作量，所以还需要对关键路径上的绩效进行单独分析，以确认项目是否将比计划完成日期提前或推迟完工。SPI(Schedule performance index) 等于 EV(Earned value) 与 PV(Planned value) 的比值。公式：SPI = EV/PV。 </li>
+	<li><b>成本绩效指数</b>。成本绩效指数（CPI, Cost performance index）是测量预算资源的成本效率的一种指标，表示为挣值与实际成本之比。它是最关键的 EVA(Earned value analysis) 指标，用来测量已完成工作的成本效率。当 CPI(Cost performance index) 小于 1.0 时，说明已完成工作的成本超支；当 CPI(Cost performance index) 大于 1.0 时，则说明到目前为止成本有结余。CPI(Cost performance index) 等于 EV(Earned value) 与 AC(Actual cost) 的比值。公式：CPI = EV/AC。</li>
 	</ul>
 	</div>
 	
 	<h5>趋势分析</h5>
 	<div>
-	<p>见 <a href="../第四章 项目整合管理/4.html#4.5.2.2">4.5.2.2 节</a>。趋势分析旨在审查项目绩效随时间的变化情况，以判断绩效是正在改善还是正在恶化。图形分析技术有助于了解截至目前的绩效情况，并把发展趋势与未来的绩效目标进行比较，如 BAC 与EAC、预测完工日期与计划完工日期的比较。趋势分析技术包括（但不限于）：
+	<p>见 <a href="../第四章 项目整合管理/4.html#4.5.2.2">4.5.2.2 节</a>。趋势分析旨在审查项目绩效随时间的变化情况，以判断绩效是正在改善还是正在恶化。图形分析技术有助于了解截至目前的绩效情况，并把发展趋势与未来的绩效目标进行比较，如 BAC(Budget at completion) 与EAC(Estimate at completion)、预测完工日期与计划完工日期的比较。趋势分析技术包括（但不限于）：
 	<ul>
-	<li><b>图表</b>。在挣值分析中，对计划价值、挣值和实际成本这三个参数，既可以分阶段（通常以周或月为单位）进行监督和报告，也可以针对累计值进行监督和报告。图 7-12 以 S 曲线展示了某个项目的 EV 数据，该项目预算超支且进度落后。
+	<li><b>图表</b>。在挣值分析中，对计划价值、挣值和实际成本这三个参数，既可以分阶段（通常以周或月为单位）进行监督和报告，也可以针对累计值进行监督和报告。图 7-12 以 S 曲线展示了某个项目的 EV(Earned value) 数据，该项目预算超支且进度落后。
 	<p><img src="./img/7-12.jpg"></li>
-	<li><b>预测</b>。随着项目进展，项目团队可根据项目绩效，对完工估算（EAC）进行预测，预测的结果可能与完工预算（BAC）存在差异。如果 BAC 已明显不再可行，则项目经理应考虑对EAC进行预测。预测EAC是根据当前掌握的绩效信息和其他知识，预计项目未来的情况和事件。预测要根据项目执行过程中所提供的工作绩效数据（见 <a href="../第四章 项目整合管理/4.html#4.3.3.2">4.3.3.2 节</a>）来产生、更新和重新发布。工作绩效信息包含项目过去的绩效，以及可能在未来对项目产生影响的任何信息。
+	<li><b>预测</b>。随着项目进展，项目团队可根据项目绩效，对完工估算（EAC, Estimate at
+completion）进行预测，预测的结果可能与完工预算（BAC, Budget at completion）存在差异。如果 BAC(Budget at completion) 已明显不再可行，则项目经理应考虑对EAC(Estimate at
+completion)进行预测。预测EAC(Estimate at
+completion)是根据当前掌握的绩效信息和其他知识，预计项目未来的情况和事件。预测要根据项目执行过程中所提供的工作绩效数据（见 <a href="../第四章 项目整合管理/4.html#4.3.3.2">4.3.3.2 节</a>）来产生、更新和重新发布。工作绩效信息包含项目过去的绩效，以及可能在未来对项目产生影响的任何信息。
 	<p>
-	在计算 EAC 时，通常用已完成工作的实际成本，加上剩余工作的完工尚需估算（ETC）。项目团队要根据已有的经验，考虑实施 ETC 工作可能遇到的各种情况。把挣值分析与手工预测 EAC 方法联合起来使用，效果会更佳。由项目经理和项目团队手工进行的自下而上汇总方法，就是一种最普通的 EAC 预测方法。
+	在计算 EAC(Estimate at
+completion) 时，通常用已完成工作的实际成本，加上剩余工作的完工尚需估算（ETC, Estimate to complete）。项目团队要根据已有的经验，考虑实施 ETC(Estimate to complete) 工作可能遇到的各种情况。把挣值分析与手工预测 EAC(Estimate at
+completion) 方法联合起来使用，效果会更佳。由项目经理和项目团队手工进行的自下而上汇总方法，就是一种最普通的 EAC(Estimate at
+completion) 预测方法。
 	<p>
-	项目经理所进行的自下而上的 EAC 估算，就是以已完成工作的实际成本为基础，并根据已积累的经验来为剩余项目工作编制一个新估算。公式：EAC = AC + 自下而上的 ETC。
+	项目经理所进行的自下而上的 EAC(Estimate at
+completion) 估算，就是以已完成工作的实际成本为基础，并根据已积累的经验来为剩余项目工作编制一个新估算。公式：EAC = AC + 自下而上的 ETC(Estimate to complete)。
 	<p>
-	可以很方便地把项目经理手工估算的 EAC 与计算得出的一系列 EAC 作比较，这些计算得出的EAC 代表了不同的风险情景。在计算 EAC 值时，经常会使用累计 CPI 和累计 SPI 值。尽管可以用许多方法来计算基于 EVM 数据的 EAC 值，但下面只介绍最常用的三种方法：
+	可以很方便地把项目经理手工估算的 EAC(Estimate at
+completion) 与计算得出的一系列 EAC(Estimate at
+completion) 作比较，这些计算得出的EAC(Estimate at
+completion) 代表了不同的风险情景。在计算 EAC(Estimate at
+completion) 值时，经常会使用累计 CPI(Cost performance index) 和累计 SPI(Schedule performance index) 值。尽管可以用许多方法来计算基于 EVM 数据的 EAC(Estimate at
+completion) 值，但下面只介绍最常用的三种方法：
 		<ul>
-			<li>假设将按预算单价完成 ETC 工作。这种方法承认以实际成本表示的累计实际项目绩效（不论好坏），并预计未来的全部 ETC 工作都将按预算单价完成。如果目前的实际绩效不好，则只有在进行项目风险分析并取得有力证据后，才能做出“未来绩效将会改进”的假设。公式：EAC = AC +（BAC – EV）。</li>
-			<li>假设以当前 CPI 完成 ETC 工作。这种方法假设项目将按截至目前的情况继续进行，即 ETC 工作将按项目截至目前的累计成本绩效指数（CPI）实施。公式：EAC = BAC/CPI。</li>
-			<li>假设 SPI 与 CPI 将同时影响 ETC 工作。在这种预测中，需要计算一个由成本绩效指数与进度绩效指数综合决定的效率指标，并假设 ETC 工作将按该效率指标完成。如果项目进度对 ETC 有重要影响，这种方法最有效。使用这种方法时，还可以根据项目经理的判断，分别给 CPI 和 SPI 赋予不同的权重，如 80/20、50/50 或其他比率。公式：EAC = AC +［（BAC – EV）/（CPI x SPI）］。</li>
+			<li>假设将按预算单价完成 ETC(Estimate to complete) 工作。这种方法承认以实际成本表示的累计实际项目绩效（不论好坏），并预计未来的全部 ETC(Estimate to complete) 工作都将按预算单价完成。如果目前的实际绩效不好，则只有在进行项目风险分析并取得有力证据后，才能做出“未来绩效将会改进”的假设。公式：EAC = AC +（BAC – EV）。</li>
+			<li>假设以当前 CPI(Cost performance index) 完成 ETC(Estimate to complete) 工作。这种方法假设项目将按截至目前的情况继续进行，即 ETC(Estimate to complete) 工作将按项目截至目前的累计成本绩效指数（CPI, Cost performance index）实施。公式：EAC = BAC/CPI。</li>
+			<li>假设 SPI(Schedule performance index) 与 CPI(Cost performance index) 将同时影响 ETC(Estimate to complete) 工作。在这种预测中，需要计算一个由成本绩效指数与进度绩效指数综合决定的效率指标，并假设 ETC(Estimate to complete) 工作将按该效率指标完成。如果项目进度对 ETC(Estimate to complete) 有重要影响，这种方法最有效。使用这种方法时，还可以根据项目经理的判断，分别给 CPI(Cost performance index) 和 SPI(Schedule performance index) 赋予不同的权重，如 80/20、50/50 或其他比率。公式：EAC = AC +［（BAC – EV）/（CPI x SPI）］。</li>
 		</ul>
 	</li>
 	</ul>
@@ -515,22 +528,32 @@ ES 是 EVM 理论和实践的延伸。挣得进度理论用 ES 和实际时间 (
 </div>
 
 <h4>7.4.2.3 完工尚需绩效指数</h4>
-完工尚需绩效指数（TCPI）是一种为了实现特定的管理目标，剩余资源的使用必须达到的成本绩效指标，是完成剩余工作所需的成本与剩余预算之比。TCPI 是指为了实现具体的管理目标（如 BAC 或 EAC），剩余工作的实施必须达到的成本绩效指标。如果 BAC 已明显不再可行，则项目经理应考虑使用预测的 EAC。经过批准后，就用 EAC 取代 BAC。基于 BAC 的 TCPI 公式：TCPI =（BAC – EV）/（BAC – AC）。
+完工尚需绩效指数（TCPI, To-complete performance index）是一种为了实现特定的管理目标，剩余资源的使用必须达到的成本绩效指标，是完成剩余工作所需的成本与剩余预算之比。TCPI(To-complete performance index) 是指为了实现具体的管理目标（如 BAC, Budget at completion 或 EAC, Estimate at
+completion），剩余工作的实施必须达到的成本绩效指标。如果 BAC(Budget at completion) 已明显不再可行，则项目经理应考虑使用预测的 EAC(Estimate at
+completion)。经过批准后，就用 EAC(Estimate at
+completion) 取代 BAC(Budget at completion)。基于 BAC(Budget at completion) 的 TCPI(To-complete performance index) 公式：TCPI =（BAC – EV）/（BAC – AC）。
 <p>
-TCPI 的概念可用图 7-13 表示。其计算公式在图的左下角，用剩余工作（BAC 减去 EV）除以剩余资金（可以是 BAC 减去 AC，或 EAC 减去 AC）。
+TCPI(To-complete performance index) 的概念可用图 7-13 表示。其计算公式在图的左下角，用剩余工作（BAC, Budget at completion 减去 EV, Earned value）除以剩余资金（可以是 BAC, Budget at completion 减去 AC, Actual cost，或 EAC, Estimate at
+completion 减去 AC, Actual cost）。
 <p>
-如果累计 CPI 低于基准（如图 7-13 所示），那么项目的全部剩余工作都应立即按 TCPI（BAC）（图 7-13 中最高的那条线）执行，才能确保实际总成本不超过批准的 BAC。至于所要求的这种绩效水平是否可行，就需要综合考虑多种因素（包括风险、项目剩余时间和技术绩效）后才能判断；如果不可行，就需要把项目未来所需的绩效水平调整为如 TCPI（EAC）线所示。基于 EAC 的 TCPI 公式： TCPI =（BAC – EV）/（EAC – AC）。表 7-1 列出了 EVM 的计算公式。
+如果累计 CPI(Cost performance index) 低于基准（如图 7-13 所示），那么项目的全部剩余工作都应立即按 TCPI（BAC, Budget at completion）（图 7-13 中最高的那条线）执行，才能确保实际总成本不超过批准的 BAC(Budget at completion)。至于所要求的这种绩效水平是否可行，就需要综合考虑多种因素（包括风险、项目剩余时间和技术绩效）后才能判断；如果不可行，就需要把项目未来所需的绩效水平调整为如 TCPI（EAC, Estimate at
+completion）线所示。基于 EAC(Estimate at
+completion) 的 TCPI 公式： TCPI =（BAC – EV）/（EAC – AC）。表 7-1 列出了 EVM 的计算公式。
 <p><img src="./img/t7-1.jpg"><p><img src="./img/7-13.jpg">
 
 <h4>7.4.2.4 项目管理信息系统 (PMIS)</h4>
-见 <a href="../第四章 项目整合管理/4.html#4.3.2.2">4.3.2.2 节</a>。项目管理信息系统常用于监测 PV、EV 和 AC 这三个 EVM 指标、绘制趋势图，并预测最终项目结果的可能区间。
+见 <a href="../第四章 项目整合管理/4.html#4.3.2.2">4.3.2.2 节</a>。项目管理信息系统常用于监测 PV(Planned value)、EV(Earned value) 和 AC(Actual cost) 这三个 EVM 指标、绘制趋势图，并预测最终项目结果的可能区间。
 
 <h3>7.4.3 控制成本：输出</h3>
 <h4>7.4.3.1 工作绩效信息</h4>
-见 <a href="../第四章 项目整合管理/4.html#4.5.1.3">4.5.1.3 节</a>。工作绩效信息包括有关项目工作实施情况的信息（对照成本基准），可以在工作包层级和控制账户层级上评估已执行的工作和工作成本方面的偏差。对于使用挣值分析的项目，CV、CPI、EAC、VAC 和 TCPI 将记录在工作绩效报告中（见 <a href="../第四章 项目整合管理/4.html#4.5.3.1">4.5.3.1 节</a>）。
+见 <a href="../第四章 项目整合管理/4.html#4.5.1.3">4.5.1.3 节</a>。工作绩效信息包括有关项目工作实施情况的信息（对照成本基准），可以在工作包层级和控制账户层级上评估已执行的工作和工作成本方面的偏差。对于使用挣值分析的项目，CV(Cost variance)、CPI(Cost performance index)、EAC(Estimate at
+completion)、VAC(Variance at
+completion) 和 TCPI(To-complete performance index) 将记录在工作绩效报告中（见 <a href="../第四章 项目整合管理/4.html#4.5.3.1">4.5.3.1 节</a>）。
 
 <h4>7.4.3.2 成本预测</h4>
-无论是计算得出的 EAC 值，还是自下而上估算的 EAC 值，都需要记录下来，并传达给相关方。
+无论是计算得出的 EAC(Estimate at
+completion) 值，还是自下而上估算的 EAC(Estimate at
+completion) 值，都需要记录下来，并传达给相关方。
 
 <h4>7.4.3.3 变更请求</h4>
 见 <a href="../第四章 项目整合管理/4.html#4.3.3.4">4.3.3.4 节</a>。分析项目绩效后，可能会就成本基准和进度基准，或项目管理计划的其他组成部分提出变更请求。应该通过实施整体变更控制过程（见 <a href="../第四章 项目整合管理/4.html#4.6">4.6 节</a>）对变更请求进行审查和处理。
